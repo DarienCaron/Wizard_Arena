@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: ff4fbc6194ba83443a77d4e5da6bde3c
   - enabled: 1
-    path: Assets/Scenes/Options.unity
-    guid: aeed67ceca2a8634a8634422a06debc8
-  - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 7ddd8d6f5755f934191d144599a2f1d3
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: f849d36cffd3af04a8fabe2a2e508223
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: aeed67ceca2a8634a8634422a06debc8
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 6a6fd5098ec304648addf9767516e68e

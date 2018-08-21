@@ -1082,10 +1082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abaa71b59f59f64a8f9c8fb2058a0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetToFollow: {fileID: 742424726}
-  yOrbit: 1
-  A: 3
-  B: 30
 --- !u!1 &585665211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,7 +2510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1996155932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11d1199594add2a478a6ae3c887867e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3961e6363078d484288214ee7aef1ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1996155934
