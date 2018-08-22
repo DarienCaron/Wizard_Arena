@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RespawnTemporalScript : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
+
     public Vector3 _InitialPos; // Starting position of the player
     public float _YOffset;
     public Rigidbody rb;
@@ -12,8 +12,6 @@ public class RespawnTemporalScript : MonoBehaviour
         _InitialPos = transform.position;
         rb = GetComponent<Rigidbody>();
     }
-
-
 
     void FixedUpdate()
     {
@@ -24,35 +22,34 @@ public class RespawnTemporalScript : MonoBehaviour
         }
 
 
-
         if (Input.GetKeyDown("space"))
         {
             Vector3 tempVel = rb.velocity;
-            rb.velocity = tempVel + new Vector3(0, 10, 0);
+            rb.velocity = tempVel + new Vector3(0, 1, 0);
             print("space key was pressed");
         }
         if (Input.GetKeyDown("w"))
         {
             Vector3 tempVel = rb.velocity;
-            rb.velocity = tempVel + new Vector3(0, 0, 10);
+            rb.velocity = tempVel + new Vector3(0, 0, 1);
             print("space key was pressed");
         }
         if (Input.GetKeyDown("a"))
         {
             Vector3 tempVel = rb.velocity;
-            rb.velocity = tempVel + new Vector3(-10, 0, 0);
+            rb.velocity = tempVel + new Vector3(-1, 0, 0);
             print("space key was pressed");
         }
         if (Input.GetKeyDown("s"))
         {
             Vector3 tempVel = rb.velocity;
-            rb.velocity = tempVel + new Vector3(0, 0, -10);
+            rb.velocity = tempVel + new Vector3(0, 0, -1);
             print("space key was pressed");
         }
         if (Input.GetKeyDown("d"))
         {
             Vector3 tempVel = rb.velocity;
-            rb.velocity = tempVel + new Vector3(10, 0, 0);
+            rb.velocity = tempVel + new Vector3(1, 0, 0);
             print("space key was pressed");
         }
     }
