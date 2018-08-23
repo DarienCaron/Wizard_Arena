@@ -52,11 +52,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown("u"))
-        {
-            Debug.Log("loop song requested");
-            LoadAudioClip("loop");
-        }
+
 
         if (Input.GetKeyDown("space"))
         {
@@ -69,6 +65,11 @@ public class AudioManager : MonoBehaviour
             LoadNextSong();
         }
         CheckSoundSettings();
+        if (Input.GetKeyDown("u"))
+        {
+            Debug.Log("loop song requested");
+            LoadAudioClip("loop");
+        }
     }
     public void LoadNextSong()
     {
@@ -78,9 +79,7 @@ public class AudioManager : MonoBehaviour
         {
             musicIndex = 0;
         }
-        audioBackgorundMusic.Stop();
-        audioBackgorundMusic.clip = backggroundMusic[musicIndex];
-        audioBackgorundMusic.Play();
+        ChangeBackGroundMusic(backggroundMusic[musicIndex]);
         //SceneManager.GetActiveScene().buildIndex;
     }
     public void CheckSoundSettings()
@@ -95,6 +94,7 @@ public class AudioManager : MonoBehaviour
     {
         audioBackgorundMusic.Stop();
         audioBackgorundMusic.clip = aMusic;
+        audioBackgorundMusic.Play();
     }
 
     public void LoadAudioClip(string aName)
@@ -102,10 +102,10 @@ public class AudioManager : MonoBehaviour
         int maxIndex = backggroundMusic.Length;
         for (int i = 0; i < maxIndex; i++)
         {
-            if(aName.Equals(backggroundMusic[i].name))
+            Debug.Log("you request to play : " + aName);
+            if (aName.Equals(backggroundMusic[i].name))
             {
-                audioBackgorundMusic.Stop();
-                audioBackgorundMusic.clip = backggroundMusic[i];
+                ChangeBackGroundMusic(backggroundMusic[i]);                                    
                 Debug.Log(aName + "Was Loaded as the background music");
                 return;
             }
