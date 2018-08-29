@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour {
 
-    public GameObject HitTarget;
+    protected float m_Damage;
 
-    public float Damage;
-
+    public float GetDamage()
+    {
+        return m_Damage;
+    }
 }
-
-
-
