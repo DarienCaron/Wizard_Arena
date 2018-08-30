@@ -11,6 +11,9 @@ public abstract class LivingEntity : MonoBehaviour {
 
     protected Transform m_EntityTransform;
     protected Vector3 m_StartPosition;
+
+    protected bool m_IsDead;
+    protected bool m_IsAlive;
     // Use this for initialization
 
     private void Start()
@@ -19,6 +22,13 @@ public abstract class LivingEntity : MonoBehaviour {
         m_StartPosition = m_EntityTransform.position;
     }
 
+    private void Update()
+    {
+        if(m_EntityHealth <= 0.0f)
+        {
+            Kill();
+        }
+    }
 
     protected abstract void Attack();
 
@@ -32,6 +42,8 @@ public abstract class LivingEntity : MonoBehaviour {
             TakeDamage(damageToDeal);
         }
     }
+
+    protected abstract void Kill();
 
     protected void TakeDamage(float damage)
     {

@@ -28,4 +28,10 @@ public class Player : LivingEntity {
     {
 
     }
+
+    protected override void Kill()
+    {
+        m_IsDead = true;
+            
+    }
 }
